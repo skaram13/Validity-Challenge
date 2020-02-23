@@ -1,1 +1,16 @@
-Blank page with a route set up. Add a form to me!
+<div class="form-style-3">
+    <form>
+        <fieldset>
+            <legend>Validate Email Address</legend>
+            <label for="address"><span>Email <span class="required">*</span></span><input type="text"
+                    class="input-field" name="address" value="<%= @address %>" /></label>
+            <label><input type="submit" value="Submit" /></label>
+
+            <label>
+            <% if flash[:success] %>
+                <div><%= flash[:success] %></div>
+            <% end %>
+            </label>
+        </fieldset>
+    </form>
+</div>

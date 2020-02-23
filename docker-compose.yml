@@ -1,7 +1,9 @@
 version: '3'
 services:
   db:
-    image: "postgres:11"
+    image: postgres:11
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
     container_name: "my_postgres"
     ports:
       - "54320:5432"
